@@ -1,0 +1,32 @@
+{
+    // See: https://go.microsoft.com/fwlink/?LinkId=733558
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "📘 Prep",
+            "type": "shell",
+            "command": "prep prep.yaml --path ./lib",
+        },
+        {
+            "label": "⚡ Prep & Serve",
+            "type": "shell",
+            "command": "prep prep.yaml --path ./lib;flutter run -d web-server --web-port 8080",
+        },
+        {
+            "label": "⚡ Prep & Serve (Example)",
+            "type": "shell",
+            "command": "prep ./example/prep.yaml --path ./example/lib;flutter run -d web-server --target example/lib/main.dart --web-port 8080",
+        },
+        {
+            "label": "🌐 8080",
+            "type": "shell",
+            "command": "start http://localhost:8080",
+        },
+        // More examples:
+        {
+            "label": "Run: warrant_0_example.dart",
+            "type": "shell",
+            "command": "dart run ./lib/src/warrant_0_example.dart",
+        }
+    ]
+}

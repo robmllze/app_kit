@@ -1,0 +1,78 @@
+{
+	// Web
+	"readWebFile": {
+		"prefix": "readWebFile",
+		"body": [
+			"//import 'dart:html';",
+			"",
+			"Future<String> readWebFile(final String path) {",
+			"  return Future<String>(() async {",
+			"    final _request = await HttpRequest.request(path);",
+			"    final _response = _request.response;",
+			"    return _response as String;",
+			"  });",
+			" }"
+		],
+		"description": ""
+	},
+	// PrepLog
+	"PrepLog.file": {
+		"prefix": "PrepLog.file",
+		"body": [
+			"import 'package:prep/prep.dart' show PrepLog, PrepKeyValue;",
+			"",
+			"const _LOG = PrepLog.file(\"<#f=>\");"
+		],
+		"description": ""
+	},
+	"_LOG.alert": {
+		"prefix": "_LOG.alert",
+		"body": [
+			"_LOG.alert(",
+			"  \"${1:message}\",",
+			"  \"<#l=>\",",
+			");"
+		],
+		"description": ""
+	},
+	"_LOG.error": {
+		"prefix": "_LOG.error",
+		"body": [
+			"_LOG.error(",
+			"  \"${1:message}\",",
+			"  \"<#l=>\",",
+			");"
+		],
+		"description": ""
+	},
+	"_LOG.info": {
+		"prefix": "_LOG.info",
+		"body": [
+			"_LOG.info(",
+			"  \"${1:message}\",",
+			"  \"<#l=>\",",
+			");"
+		],
+		"description": ""
+	},
+	"_LOG.note": {
+		"prefix": "_LOG.note",
+		"body": [
+			"_LOG.note(",
+			"  \"${1:message}\",",
+			"  \"<#l=>\",",
+			");"
+		],
+		"description": ""
+	},
+	"_LOG.warning": {
+		"prefix": "_LOG.warning",
+		"body": [
+			"_LOG.warning(",
+			"  \"${1:message}\",",
+			"  \"<#l=>\",",
+			");"
+		],
+		"description": ""
+	}
+}
